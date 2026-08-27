@@ -1,0 +1,19 @@
+{
+  "name": "batch-it-protocol",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Batch It! — fair-launch protocol wrapping Pump.fun",
+  "license": "MIT",
+  "scripts": {
+    "spike:status": "npm --prefix spikes/pda-buyer run spike:status",
+    "spike": "npm --prefix spikes/pda-buyer run spike",
+    "build:batchit": "cargo build-sbf --manifest-path programs/batchit/Cargo.toml",
+    "test:math": "cargo test --manifest-path programs/batchit/Cargo.toml math && npm --prefix packages/core test",
+    "test:pl": "npm --prefix tests/localnet test",
+    "test:pl:devnet": "npm --prefix tests/localnet run test:pl:devnet",
+    "build:spike-program": "cargo build-sbf --manifest-path programs/spike_pda_buyer/Cargo.toml"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

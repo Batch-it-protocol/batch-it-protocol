@@ -1,0 +1,26 @@
+{
+  "name": "@batchit/localnet-tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validator:start": "powershell -ExecutionPolicy Bypass -File ./scripts/start-validator.ps1",
+    "validator:stop": "powershell -ExecutionPolicy Bypass -File ./scripts/stop-validator.ps1",
+    "deploy": "tsx src/deploy-batchit.ts",
+    "test:pl": "tsx --test src/pl-matrix.test.ts",
+    "test:pl:devnet": "tsx src/run-devnet-pl.ts",
+    "test": "tsx src/run-all.ts"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.2",
+    "bn.js": "^5.2.1",
+    "bs58": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.6",
+    "@types/node": "^22.15.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

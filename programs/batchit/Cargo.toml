@@ -1,0 +1,24 @@
+[package]
+name = "batchit"
+version = "0.1.0"
+description = "Batch It! fair-launch escrow — pool SOL, one PDA buy, burn surplus, claim"
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "batchit"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+# When enabled, complete_buy skips pump CPI (local unit tests only).
+test-mock-buy = []
+
+[dependencies]
+anchor-lang = { version = "1.1.2", features = ["init-if-needed"] }
+anchor-spl = "1.1.2"

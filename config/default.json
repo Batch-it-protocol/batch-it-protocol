@@ -1,0 +1,47 @@
+{
+  "cluster": "devnet",
+  "rpcUrl": "https://api.devnet.solana.com",
+  "wsUrl": "wss://api.devnet.solana.com",
+  "jito": {
+    "blockEngineUrl": "https://mainnet.block-engine.jito.wtf",
+    "bundleApiPath": "/api/v1/bundles",
+    "tipLamports": 10000,
+    "tipAccounts": [
+      "96gYZGLnJYVFmbjzopPSU6QiEV5fGqZNyN9nmNhvrZU5",
+      "HFqU5x63VTqvQss8hp11i4bVmkdsTow82sx35E7Nkjq",
+      "Cw8CFyM9FkoMi7K7Crf6HNQqf4uEMzpKw6QNghXLvLkY",
+      "ADaUMid9yfUytqMBgopwjb2DTLSokTSzL1zt6iGPaS49",
+      "DfXygSm4jCyNCybVYYK6DwvWqjKee8pbDmJGcLWNDXjh",
+      "ADuUkR4vqLUMWXxW9gh6D6L8pMSawimctcNZ5pGwDcEt",
+      "DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL",
+      "3AVi9Tg9Uo68tJfuvoKvqKNWKkC5wPdSSdeBnizKZ6jT"
+    ],
+    "note": "Jito block engines are mainnet-oriented. On devnet the spike falls back to same-tx / sequential RPC submission while still building bundle-shaped payloads for mainnet path validation. Override via config/local.json or env."
+  },
+  "pump": {
+    "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "feeProgramId": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+    "mayhemProgramId": "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+    "idlCommit": "9c82f61cb711b044a17f770ab8ce9f9bdf78f333",
+    "buyLayoutPin": "@pump-fun/pump-sdk@1.36.0",
+    "buyLayoutPinPath": "third_party/pump-sdk/PIN.md",
+    "feeRecipient": "68yFSZxzLWJXkxxRGydZ63C6mHx1NLEDWmwN9Lb5yySg",
+    "feeRecipientNote": "Devnet Global.fee_recipient. Prefer runtime decode from Global; mainnet list differs (see FEE_RECIPIENTS.md).",
+    "buybackFeeRecipient": "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD"
+  },
+  "spike": {
+    "buySolLamports": 50000000,
+    "minTokensOut": 1,
+    "tokenName": "BatchIt Spike",
+    "tokenSymbol": "BISPK",
+    "tokenUri": "https://batchit.fun/spike.json"
+  },
+  "poolDefaults": {
+    "minRaiseLamports": 1000000000,
+    "maxPoolLamports": 10000000000,
+    "minContributionLamports": 50000000,
+    "contributionWindowSecs": 86400,
+    "graceSecs": 3600,
+    "note": "Proposed defaults pending confirmation: min_raise 1 SOL, max_pool 10 SOL, min_contribution 0.05 SOL, contribution window 24h, grace 1h after launch_at."
+  }
+}

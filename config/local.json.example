@@ -1,0 +1,7 @@
+{
+  "rpcUrl": "https://api.devnet.solana.com",
+  "jito": {
+    "blockEngineUrl": "https://mainnet.block-engine.jito.wtf",
+    "tipLamports": 10000
+  }
+}

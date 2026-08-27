@@ -1,0 +1,22 @@
+[package]
+name = "spike_pda_buyer"
+version = "0.1.0"
+description = "Batch It! spike: prove pump.fun accepts a PDA buyer via invoke_signed"
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "spike_pda_buyer"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = "1.1.2"
+anchor-spl = "1.1.2"
